@@ -1,19 +1,24 @@
+:root {
+  --red-color: #bb3535;
+}
+.row-marginer {
+  margin: 20px 0 !important;
+}
+button {
+  all: unset;
+  background-color: var(--red-color);
+  color: white;
+}
 .banner {
   height: 80vh;
 }
 .questions {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  padding: 0 !important;
   p {
     border-top: 1px solid rgba($color: #000000, $alpha: 0.5);
     border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
     border-left: 1px solid rgba($color: #000000, $alpha: 0.5);
     text-align: center;
-    width: 100%;
   }
   p:last-child {
     border-right: 1px solid rgba($color: #000000, $alpha: 0.5);
@@ -22,22 +27,25 @@
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 
   ul {
     display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
     li {
       all: unset;
-      margin: 5px 10px;
+      margin: 5px 30px;
       cursor: pointer;
     }
     button {
-      height: 30px;
+      padding: 1rem;
     }
   }
 }
 .fluid-nav {
-  background-color: #333;
+  background-color: #000;
   color: white;
 }
 .middle-nav {
@@ -54,13 +62,14 @@ nav {
 }
 .search {
   display: flex;
+  align-items: center;
   button {
-    padding: 1rem;
+    padding: 5px;
   }
   .category-filter {
     display: flex;
-    border: 1px solid rgba($color: #000000, $alpha: 0.5);
-    padding: 1rem 2rem;
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    padding: 5px 10px;
 
     input {
       all: unset;
@@ -76,4 +85,42 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  ul {
+    margin: 0;
+  }
+}
+.logo {
+  position: absolute;
+  top: 45px;
+  left: 100px;
+}
+.filter-container {
+  margin-top: 200px;
+}
+.filter {
+  ul {
+    display: flex;
+    li {
+      all: unset;
+      margin: 0 20px;
+    }
+    li:first-child::after {
+      margin-left: 5px;
+      content: "->";
+    }
+  }
+}
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filtered-box {
+  position: relative;
+}
+.ontop-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
 }

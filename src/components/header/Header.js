@@ -1,32 +1,36 @@
 import React from "react";
-import { Container, Row, Dropdown, Button } from "react-bootstrap";
+import { Container, Row, Dropdown, Button, Col } from "react-bootstrap";
 import Logo from "../../assets/fashion-logo.webp";
-import { BsFacebook } from "react-icons/bs";
+import { BsFacebook, BsSearch } from "react-icons/bs";
 import { AiFillTwitterCircle, AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 
 const Header = () => {
   return (
     <div>
-      <Container>
+      <Container fluid>
         <Row>
-          <div className="questions">
+          <Col xl="4" xxl="4" className="questions">
             <p>FREE SHIPPING ON ALL ORDER</p>
+          </Col>
+          <Col xl="4" xxl="4" className="questions">
             <p>100% MONEY BACK GUARANTEE</p>
+          </Col>
+          <Col xl="4" xxl="4" className="questions">
             <p>ONLINE SUPPORT 24/6</p>
-          </div>
+          </Col>
         </Row>
       </Container>
       <Container>
         <Row>
-          <div className="middle-nav">
+          <Col xxl="12" className="row-marginer middle-nav">
             <div className="logo">
-              <img src={Logo} alt="fashion store" height="120px" width="230" />
+              <img src={Logo} alt="fashion store" height="90px" width="230" />
             </div>
             <div className="search">
               <div className="category-filter">
                 <input type="text" placeholder="Search" />
                 <Dropdown>
-                  <Dropdown.Toggle variant="success" id="dropdown-basic">
+                  <Dropdown.Toggle variant="danger" id="dropdown-basic">
                     Dropdown Button
                   </Dropdown.Toggle>
 
@@ -37,7 +41,9 @@ const Header = () => {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
-              <Button>Click</Button>
+              <Button variant="danger">
+                <BsSearch size="25" />
+              </Button>
             </div>
             <div className="media">
               <ul>
@@ -55,7 +61,7 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </Col>
         </Row>
       </Container>
       <Container fluid className="fluid-nav">

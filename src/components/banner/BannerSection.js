@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import "./BannerSection.module.scss";
-import Banner from "../../assets/banner-img.png";
+import Banner from "../../assets/newcollection.jpeg";
 
 // import required modules
 import { Navigation } from "swiper";
@@ -17,7 +17,8 @@ const BannerSection = () => {
     <div className="banner">
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
         <SwiperSlide>
-          <img src={Banner} alt="banner" />
+          {/* <img src={Banner} alt="banner" /> */}
+          Slide 1
         </SwiperSlide>
         <SwiperSlide>
           <img src={Banner} alt="banner" />
